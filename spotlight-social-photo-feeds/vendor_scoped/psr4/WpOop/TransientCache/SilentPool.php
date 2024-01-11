@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace WpOop\TransientCache;
+namespace RebelCode\Spotlight\Instagram\Vendor\WpOop\TransientCache;
 
 use Exception;
-use Psr\SimpleCache\InvalidArgumentException as InvalidArgumentExceptionInterface;
-use Psr\SimpleCache\CacheInterface;
+use RebelCode\Spotlight\Instagram\Vendor\Psr\SimpleCache\InvalidArgumentException as InvalidArgumentExceptionInterface;
+use RebelCode\Spotlight\Instagram\Vendor\Psr\SimpleCache\CacheInterface;
 
 /**
  * Wraps a pool that throws wrong exceptions in a 100% PSR-compliant one by hiding exceptions :(

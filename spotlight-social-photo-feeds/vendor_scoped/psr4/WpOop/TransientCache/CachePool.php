@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace WpOop\TransientCache;
+namespace RebelCode\Spotlight\Instagram\Vendor\WpOop\TransientCache;
 
 use DateInterval;
 use DateTimeImmutable;
 use Exception;
-use Psr\SimpleCache\CacheInterface;
+use RebelCode\Spotlight\Instagram\Vendor\Psr\SimpleCache\CacheInterface;
 use RangeException;
 use RuntimeException;
 use wpdb;
-use WpOop\TransientCache\Exception\CacheException;
-use WpOop\TransientCache\Exception\InvalidArgumentException;
-use Psr\SimpleCache\InvalidArgumentException as InvalidArgumentExceptionInterface;
+use RebelCode\Spotlight\Instagram\Vendor\WpOop\TransientCache\Exception\CacheException;
+use RebelCode\Spotlight\Instagram\Vendor\WpOop\TransientCache\Exception\InvalidArgumentException;
+use RebelCode\Spotlight\Instagram\Vendor\Psr\SimpleCache\InvalidArgumentException as InvalidArgumentExceptionInterface;
 
 use function is_int;
 use function is_iterable;

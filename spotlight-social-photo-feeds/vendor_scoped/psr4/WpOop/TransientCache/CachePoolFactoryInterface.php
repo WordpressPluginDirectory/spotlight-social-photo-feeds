@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace WpOop\TransientCache;
+namespace RebelCode\Spotlight\Instagram\Vendor\WpOop\TransientCache;
 
-use Psr\SimpleCache\CacheInterface;
+use RebelCode\Spotlight\Instagram\Vendor\Psr\SimpleCache\CacheInterface;
 
 /**
  * A factory that can create cache pool.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Psr\SimpleCache;
+namespace RebelCode\Spotlight\Instagram\Vendor\Psr\SimpleCache;
 
 /**
  * Exception interface for invalid cache arguments.
