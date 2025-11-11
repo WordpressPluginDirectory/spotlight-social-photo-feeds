@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace RebelCode\Spotlight\Instagram\Wp;
 
-use RebelCode\Spotlight\Instagram\Utils\Arrays;
 use RebelCode\Spotlight\Instagram\Utils\Functions;
+use RebelCode\Spotlight\Instagram\Utils\Arrays;
 
 class NoticesManager
 {
@@ -60,8 +60,8 @@ class NoticesManager
     /** Handles a notice dismissal request */
     public function handleAjax()
     {
-        $id = filter_input(INPUT_POST, 'notice', FILTER_SANITIZE_STRING);
-        $nonce = filter_input(INPUT_POST, 'nonce', FILTER_SANITIZE_STRING);
+        $id = isset($_POST['notice']) ? sanitize_text_field($_POST['notice']) : '';
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field($_POST['nonce']) : '';
 
         if (!wp_verify_nonce($nonce, $this->nonce)) {
             status_header(400);
@@ -94,7 +94,7 @@ class NoticesManager
     /** Actually enqueues the script and localizes it */
     public function enqueueScripts()
     {
-        wp_enqueue_script('sli-admin-notices', $this->script, ['jquery'], SL_INSTA_VERSION, true);
+        wp_enqueue_script('sli-admin-notices', $this->script, ['jquery', 'wp-element', 'wp-i18n'], SL_INSTA_VERSION, true);
 
         wp_localize_script('sli-admin-notices', 'SliNoticesL10n', [
             'ajaxUrl' => admin_url('admin-ajax.php'),

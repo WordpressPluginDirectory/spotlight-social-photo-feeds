@@ -1,12 +1,12 @@
-=== Spotlight Social Feeds [Block, Shortcode, and Widget] ===
+=== Spotlight Social Feeds - Block, Shortcode, and Widget ===
 
-Contributors: RebelCode, spotlightsocialfeeds, markzahra, Mekku, jeangalea, gabygalea
+Contributors: RebelCode, spotlightsocialfeeds, markzahra, Mekku, jeangalea, gabygalea, omidakhavan
 Plugin URI: https://spotlightwp.com
-Tags: Instagram, Instagram feed, Instagram feeds, Instagram block, Instagram embed, social media, social media feed, Instagram widget, link in bio, Instagram gallery, shoppable Instagram, hashtag feed
+Tags: Instagram, Instagram feed, Instagram embed, Instagram widget, Instagram block
 Requires at least: 5.7
 Requires PHP: 7.1
-Tested up to: 6.3
-Stable tag: 1.6.11
+Tested up to: 6.8
+Stable tag: 1.7.4
 License: GPLv3
 
 Instagram feeds made easy. Responsive, customizable, accessible, and SEO-friendly out of the box. Includes Instagram blocks & oEmbed support.
@@ -110,7 +110,7 @@ We are constantly working on new innovative features to make your Instagram cont
 - [**Shoppable Instagram feeds**](https://spotlightwp.com/shoppable-instagram-feed-wordpress/?utm_source=readme&utm_medium=readme_desc&utm_campaign=readme_desc_upgradeshoppable) to increase eCommerce sales through your social media content
 - WooCommerce integration (link posts to products)
 
-**[Spotlight All Access](https://spotlightwp.com/pricing/?utm_source=readme&utm_medium=readme_desc&utm_campaign=readme_desc_all_access)**
+**[Spotlight Agency](https://spotlightwp.com/pricing/?utm_source=readme&utm_medium=readme_desc&utm_campaign=readme_desc_all_access)**
 - Everything in Free, Essentials, and PRO plus...
 - Instagram account **insights**
 - Instagram post insights
@@ -266,6 +266,61 @@ Yes, aside from the customisation options provided by Spotlight itself, the plug
 7. [Premium] Create shoppable Instagram Feeds and Instagram bio link pages in seconds. Link Instagram posts to articles, products, recipes, and much more.
 
 == Changelog ==
+
+= 1.7.4 (2025-11-11) =
+
+**Added**
+- Added a 4:5 image ratio option to the Grid layout.
+- Added 3:4 and 4:5 image ratio options to the Highlight and Slider layouts.
+
+**Fixed**
+- Fixed misaligned arrows in Slider layouts.
+
+= 1.7.3 (2025-09-02) =
+
+**Changed**
+- Spotlight now supports Meta’s oEmbed API v22.0.
+- This ensures continued compatibility after Meta’s removal of certain oEmbed fields and the deprecation of the Facebook Page Post oEmbed endpoint (effective October 1, 2025).
+
+= 1.7.2 (2025-02-11) =
+
+**Added**
+- Added a Tall Grid template with a 3:4 ratio and a new Ratio option in Appearance Settings.
+
+**Changed**
+- Removed local error log and redirected errors to the WordPress debug log.
+
+= 1.7.1 (2025-01-27) =
+
+**Changed**
+- Updated PHP deprecations related to filtering.
+- Updated Freemius SDK to the latest version.
+
+= 1.7.0 (2024-12-10) =
+
+**Added**
+- Implemented Instagram Business Basic API to replace the deprecated Personal API for enhanced functionality and compliance with platform requirements.
+
+= 1.6.16 (2024-11-04) =
+
+**Fixed**
+- Release issues.
+
+= 1.6.15 (2024-11-01) =
+
+**Added**
+- Notices for changes to Meta API for personal and business accounts.
+
+= 1.6.13 (2024-06-03) =
+
+**Changed**
+- Renamed the "All Access" plan to "Agency".
+- Updated the pricing page to use the new beta Freemius pricing app.
+
+= 1.6.12 (2024-05-13) =
+
+**Changed**
+- Changed upgrade button text.
 
 = 1.6.11 (2024-02-12) =
 

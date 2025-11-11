@@ -2,11 +2,9 @@
 
 if ( !function_exists( 'sliFreemius' ) ) {
     // Create a helper function for easy SDK access.
-    function sliFreemius()
-    {
+    function sliFreemius() {
         /* @var $sliFreemius Freemius */
-        global  $sliFreemius ;
-        
+        global $sliFreemius;
         if ( !isset( $sliFreemius ) ) {
             // Include Freemius SDK.
             require_once dirname( __FILE__ ) . '/vendor/freemius/wordpress-sdk/start.php';
@@ -22,12 +20,12 @@ if ( !function_exists( 'sliFreemius' ) ) {
                     'is_org_compliant' => true,
                     'has_affiliation'  => 'selected',
                     'menu'             => [
-                    'slug'        => 'spotlight-instagram',
-                    'pricing'     => true,
-                    'support'     => false,
-                    'contact'     => true,
-                    'affiliation' => false,
-                ],
+                        'slug'        => 'spotlight-instagram',
+                        'pricing'     => true,
+                        'support'     => false,
+                        'contact'     => true,
+                        'affiliation' => false,
+                    ],
                     'is_live'          => true,
                 ] );
             } catch ( Freemius_Exception $e ) {
@@ -35,14 +33,13 @@ if ( !function_exists( 'sliFreemius' ) ) {
                 return null;
             }
         }
-        
         $sliFreemius->override_i18n( [
             'account'    => __( 'License', 'sl-insta' ),
             'contact-us' => __( 'Help', 'sl-insta' ),
         ] );
         return $sliFreemius;
     }
-    
+
     // Init Freemius.
     sliFreemius();
     // Set plugin icon
@@ -55,6 +52,10 @@ if ( !function_exists( 'sliFreemius' ) ) {
     sliFreemius()->add_filter( 'deactivate_on_activation', '__return_false' );
     // Disable redirect on activation
     sliFreemius()->add_filter( 'redirect_on_activation', '__return_false' );
+    // New Freemius beta pricing page
+    sliFreemius()->add_filter( 'freemius_pricing_js_path', function () {
+        return plugin_dir_path( SL_INSTA_FILE ) . '/ui/freemius-pricing/freemius-pricing.js';
+    } );
     // Signal that SDK was initiated.
     do_action( 'sli_freemius_loaded' );
 }
